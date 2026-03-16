@@ -104,6 +104,7 @@ function clearPasswordInput() {
 function showHomeScreen() {
   lockScreen.classList.remove("active");
   homeScreen.classList.add("active");
+  document.body.classList.add("is-unlocked");
 }
 
 function wrongPassword() {
