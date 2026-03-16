@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Website</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="bg-pattern"></div>
+
+    <div class="floating-decor decor-1">
+      <img src="./assets/images/decor/heart.png" alt="heart" />
+    </div>
+    <div class="floating-decor decor-2">
+      <img src="./assets/images/decor/bunny.png" alt="bunny" />
+    </div>
+    <div class="floating-decor decor-3">
+      <img src="./assets/images/decor/flower.png" alt="flower" />
+    </div>
+    <div class="floating-decor decor-4">
+      <img src="./assets/images/decor/ribbon.png" alt="ribbon" />
+    </div>
+
+    <!-- LOCK SCREEN -->
+    <main id="lockScreen" class="screen active">
+      <section class="lock-wrapper">
+        <div class="lock-side-decor left">
+          <img src="./assets/images/decor/flower.png" alt="flower" />
+        </div>
+
+        <div class="lock-side-decor right">
+          <img src="./assets/images/decor/ribbon.png" alt="ribbon" />
+        </div>
+
+        <div class="lock-card" id="lockCard">
+          <div class="lock-photo-panel">
+            <div class="lock-photo-frame">
+              <img
+                src="./assets/images/cover/lock-photo.jpg"
+                alt="Ảnh của em"
+                class="lock-photo"
+              />
+            </div>
+          </div>
+
+          <div class="lock-panel">
+            <div class="lock-heart">
+              <img src="./assets/images/decor/heart.png" alt="heart" />
+            </div>
+
+            <div class="password-dots" id="passwordDots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
+            <p class="lock-message" id="lockMessage">
+              Nhập mật khẩu của hai đứa nè 💗
+            </p>
+
+            <div class="numpad">
+              <button class="num-btn" data-key="1">1</button>
+              <button class="num-btn" data-key="2">2</button>
+              <button class="num-btn" data-key="3">3</button>
+
+              <button class="num-btn" data-key="4">4</button>
+              <button class="num-btn" data-key="5">5</button>
+              <button class="num-btn" data-key="6">6</button>
+
+              <button class="num-btn" data-key="7">7</button>
+              <button class="num-btn" data-key="8">8</button>
+              <button class="num-btn" data-key="9">9</button>
+
+              <button class="num-btn ghost-btn" disabled></button>
+              <button class="num-btn" data-key="0">0</button>
+              <button class="num-btn delete-btn" id="deleteBtn">⌫</button>
+            </div>
+
+            <p class="lock-hint">Mật khẩu là ngày đặc biệt của hai đứa ✨</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- HOME SCREEN -->
+    <main id="homeScreen" class="screen">
+      <section class="home-wrapper">
+        <header class="home-header">
+          <p class="home-badge">
+            <img src="./assets/images/decor/ribbon.png" alt="ribbon" />
+            Một món quà nhỏ dành riêng cho bé iu 💖
+          </p>
+          <h1>Dành riêng cho em 💖</h1>
+          <p>Chọn một món quà nhỏ ở bên dưới nha</p>
+        </header>
+
+        <section class="feature-grid">
+          <button class="feature-card" data-open="musicModal">
+            <img
+              src="./assets/images/icons/music.png"
+              alt="Music"
+              class="feature-icon-img"
+            />
+            <span class="feature-title">Music</span>
+            <span class="feature-subtitle">Những bài hát dành cho em</span>
+          </button>
+
+          <button class="feature-card" data-open="letterModal">
+            <img
+              src="./assets/images/icons/letter.png"
+              alt="Letter"
+              class="feature-icon-img"
+            />
+            <span class="feature-title">Letter</span>
+            <span class="feature-subtitle">Một bức thư nhỏ</span>
+          </button>
+
+          <button class="feature-card" data-open="imageModal">
+            <img
+              src="./assets/images/icons/image.png"
+              alt="Image"
+              class="feature-icon-img"
+            />
+            <span class="feature-title">Image</span>
+            <span class="feature-subtitle">Những hình ảnh của béiu</span>
+          </button>
+
+          <button class="feature-card" data-open="giftModal">
+            <img
+              src="./assets/images/icons/gift.png"
+              alt="Gift"
+              class="feature-icon-img"
+            />
+            <span class="feature-title">Gift</span>
+            <span class="feature-subtitle">Món quà yêu thương</span>
+          </button>
+        </section>
+
+        <!-- Floating Music Control -->
+        <button class="music-mini-control" id="musicMiniControl">
+          <div class="music-visualizer" id="visualizer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <img src="./assets/images/icons/music.png" alt="music" />
+        </button>
+      </section>
+    </main>
+
+    <!-- MUSIC MODAL -->
+    <div class="modal" id="musicModal">
+      <div class="modal-card music-modal">
+        <button class="close-modal" data-close>
+          <img src="./assets/images/icons/close.png" alt="Close" />
+        </button>
+
+        <div class="music-heading">
+          <img src="./assets/images/icons/music.png" alt="music" />
+          <span>MUSIC PLAYER</span>
+        </div>
+
+        <img
+          id="songCover"
+          class="music-cover"
+          src="./assets/images/music/song1-cover.jpg"
+          alt="Song cover"
+        />
+
+        <h2 class="music-song-title" id="songTitle">Ai Ngoài Anh</h2>
+        <p class="music-song-artist" id="songArtist">Dành riêng cho em</p>
+
+        <input type="range" id="progress" min="0" max="100" value="0" />
+
+        <div class="music-time">
+          <span id="currentTime">0:00</span>
+          <span id="durationTime">0:00</span>
+        </div>
+
+        <div class="player-controls">
+          <button class="player-btn" id="prevBtn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+            </svg>
+          </button>
+          <button class="player-btn play-btn" id="playPauseBtn">
+            <svg id="playIcon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            <svg id="pauseIcon" class="hidden" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+            </svg>
+          </button>
+          <button class="player-btn" id="nextBtn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="playlist" id="playlist"></div>
+
+        <audio id="audio"></audio>
+      </div>
+    </div>
+
+    <!-- LETTER MODAL -->
+    <div class="modal" id="letterModal">
+      <div class="modal-card letter-modal">
+        <button class="close-modal" data-close>
+          <img src="./assets/images/icons/close.png" alt="Close" />
+        </button>
+
+        <div class="letter-paper">
+          <div class="letter-heading">Gửi em yêu 💌</div>
+          <div class="letter-text" id="letterText"></div>
+
+          <div class="letter-footer">
+            <div class="letter-sign">Mãi yêu em 💗</div>
+
+            <div class="letter-decor-box">
+              <img
+                class="letter-bunny"
+                src="./assets/images/decor/bunny.png"
+                alt="bunny"
+              />
+              <img
+                class="letter-heart-small"
+                src="./assets/images/decor/heart.png"
+                alt="heart"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMAGE MODAL -->
+    <div class="modal" id="imageModal">
+      <div class="modal-card image-modal">
+        <button class="close-modal" data-close>
+          <img src="./assets/images/icons/close.png" alt="Close" />
+        </button>
+
+        <div class="gallery-header">
+          <img
+            src="./assets/images/decor/bunny.png"
+            alt="bunny"
+            class="gallery-bunny"
+          />
+          <h2>Ai mà dễ thương quéee🩷</h2>
+          <p>Bấm vào ảnh để xem lớn hơn nhoo</p>
+        </div>
+
+        <div class="gallery-wrapper">
+          <div class="gallery-row">
+            <div class="gallery-track" id="galleryTrack1"></div>
+          </div>
+
+          <div class="gallery-row">
+            <div class="gallery-track reverse" id="galleryTrack2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMAGE PREVIEW -->
+    <div class="image-preview hidden" id="imagePreview">
+      <button class="preview-close" id="previewClose">
+        <img src="./assets/images/icons/close.png" alt="Close" />
+      </button>
+      <img id="previewImg" src="" alt="Preview" />
+    </div>
+
+    <!-- GIFT MODAL -->
+    <div class="modal" id="giftModal">
+      <div class="modal-card gift-modal">
+        <button class="close-modal" data-close>
+          <img src="./assets/images/icons/close.png" alt="Close" />
+        </button>
+
+        <div class="gift-title">
+          <img src="./assets/images/icons/gift.png" alt="gift" />
+          <span>Một món quà nhỏ cho em 💝</span>
+        </div>
+
+        <div class="gift-stage" id="giftStage">
+          <div class="gift-corner left">
+            <img src="./assets/images/decor/flower.png" alt="flower" />
+          </div>
+
+          <div class="gift-corner right">
+            <img src="./assets/images/decor/ribbon.png" alt="ribbon" />
+          </div>
+
+          <!--<div class="gift-sky-text">Always with you</div> -->
+
+          <div class="gift-rain" id="giftRain"></div>
+
+          <div class="bouquet" id="bouquet">
+            <img
+              src="./assets/images/decor/bouquet.png"
+              alt="Bó hoa dành cho em"
+              class="bouquet-img"
+            />
+          </div>
+
+          <div class="grass-bottom">
+            <img
+              src="./assets/images/decor/grass.png"
+              alt="Grass"
+              class="grass-img"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
