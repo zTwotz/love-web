@@ -306,21 +306,21 @@ body::before {
 }
 
 .home-header {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .home-badge {
   display: inline-flex;
   align-items: center;
-  gap: 15px;
-  padding: 15px 32px;
+  gap: 12px;
+  padding: 10px 24px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.8);
   color: var(--pink-dark);
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.15rem;
   box-shadow: 0 10px 25px rgba(213, 105, 158, 0.16);
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 .home-badge img {
@@ -330,36 +330,36 @@ body::before {
 }
 
 .home-header h1 {
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
   color: var(--pink-dark);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   letter-spacing: -0.02em;
 }
 
 .home-header p:last-child {
   color: var(--pink-text);
-  font-size: 1.6rem;
-  margin-bottom: 20px;
+  font-size: 1.35rem;
+  margin-bottom: 15px;
 }
 
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(240px, 1fr));
-  gap: 22px;
+  gap: 18px;
 }
 
 .feature-card {
-  min-height: 280px;
+  min-height: 210px;
   background: rgba(255, 245, 249, 0.88);
   border: 2px solid rgba(255, 255, 255, 0.86);
-  border-radius: 40px;
+  border-radius: 34px;
   box-shadow: var(--shadow-soft);
-  padding: 40px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -370,22 +370,22 @@ body::before {
 }
 
 .feature-icon-img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   filter: drop-shadow(0 10px 20px rgba(214, 110, 160, 0.2));
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .feature-title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 800;
   color: var(--pink-dark);
 }
 
 .feature-subtitle {
   color: var(--pink-text);
-  font-size: 1.3rem;
+  font-size: 1.15rem;
 }
 
 /* MINI MUSIC CONTROL */
